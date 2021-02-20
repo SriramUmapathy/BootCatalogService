@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: Java CI/CD with Maven Docker GKE
 
 on:
   push:
@@ -11,8 +11,8 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: my-cluster    # TODO: update to cluster name
   GKE_ZONE: us-central1-c   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: github-actions-gke # TODO: update to deployment name
-  IMAGE: github-actions-gke
+  DEPLOYMENT_NAME: book-catalog # TODO: update to deployment name
+  IMAGE: book-catalog
 
 jobs:
   setup-build-publish-deploy:
